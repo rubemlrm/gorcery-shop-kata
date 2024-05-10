@@ -1,0 +1,281 @@
+SF:/Users/rubemmota/Works/Code/Personal/Katas/GroceryApi/Program.cs
+FN:0,System.Void Program::<Main>$(System.String[])
+FNDA:0,System.Void Program::<Main>$(System.String[])
+DA:1,0
+DA:5,0
+DA:7,0
+DA:8,0
+DA:10,0
+DA:13,0
+DA:14,0
+DA:15,0
+DA:16,0
+DA:17,0
+DA:19,0
+DA:21,0
+DA:23,0
+DA:25,0
+BRDA:13,64,0,0
+BRDA:13,64,1,0
+LF:14
+LH:0
+BRF:2
+BRH:0
+FNF:1
+FNH:0
+end_of_record
+SF:/Users/rubemmota/Works/Code/Personal/Katas/GroceryApi/Stocks/ProductNotFoundException.cs
+FN:4,System.Void GroceryApi.Stocks.ProductNotFoundExceptionException::.ctor()
+FNDA:0,System.Void GroceryApi.Stocks.ProductNotFoundExceptionException::.ctor()
+DA:5,0
+FN:5,System.Void GroceryApi.Stocks.ProductNotFoundExceptionException::.ctor(System.String)
+FNDA:0,System.Void GroceryApi.Stocks.ProductNotFoundExceptionException::.ctor(System.String)
+DA:6,0
+FN:6,System.Void GroceryApi.Stocks.ProductNotFoundExceptionException::.ctor(System.String,System.Exception)
+FNDA:0,System.Void GroceryApi.Stocks.ProductNotFoundExceptionException::.ctor(System.String,System.Exception)
+DA:7,0
+FN:9,System.Void GroceryApi.Stocks.ProductNotFoundExceptionException::.ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)
+FNDA:0,System.Void GroceryApi.Stocks.ProductNotFoundExceptionException::.ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)
+DA:10,0
+LF:4
+LH:0
+BRF:0
+BRH:0
+FNF:4
+FNH:0
+end_of_record
+SF:/Users/rubemmota/Works/Code/Personal/Katas/GroceryApi/Stocks/StockProductPrice.cs
+FN:3,System.String GroceryApi.Stocks.StockProductPrice::get_Name()
+FNDA:0,System.String GroceryApi.Stocks.StockProductPrice::get_Name()
+DA:4,0
+FN:4,System.Decimal GroceryApi.Stocks.StockProductPrice::get_Price()
+FNDA:0,System.Decimal GroceryApi.Stocks.StockProductPrice::get_Price()
+DA:5,0
+LF:2
+LH:0
+BRF:0
+BRH:0
+FNF:2
+FNH:0
+end_of_record
+SF:/Users/rubemmota/Works/Code/Personal/Katas/GroceryApi/Stocks/StockRepository.cs
+FN:5,System.Collections.Generic.List`1<GroceryApi.Stocks.StockProductModel> GroceryApi.Stocks.StockRepository::All()
+FNDA:0,System.Collections.Generic.List`1<GroceryApi.Stocks.StockProductModel> GroceryApi.Stocks.StockRepository::All()
+DA:6,0
+DA:7,0
+DA:8,0
+DA:9,0
+DA:10,0
+DA:11,0
+DA:12,0
+DA:13,0
+DA:14,0
+FN:15,GroceryApi.Stocks.StockProductModel GroceryApi.Stocks.StockRepository::FindOrFail(System.String)
+FNDA:0,GroceryApi.Stocks.StockProductModel GroceryApi.Stocks.StockRepository::FindOrFail(System.String)
+DA:16,0
+DA:17,0
+DA:18,0
+DA:19,0
+BRDA:17,43,0,0
+BRDA:17,43,1,0
+FN:20,System.Decimal GroceryApi.Stocks.StockRepository::CalculateItemPrice(GroceryApi.Stocks.StockProductModel)
+FNDA:0,System.Decimal GroceryApi.Stocks.StockRepository::CalculateItemPrice(GroceryApi.Stocks.StockProductModel)
+DA:21,0
+DA:22,0
+DA:23,0
+DA:24,0
+DA:25,0
+DA:26,0
+DA:27,0
+DA:28,0
+FN:29,System.Collections.Generic.Dictionary`2<System.String,System.Decimal> GroceryApi.Stocks.StockRepository::CalculateDetailedItemPrice(GroceryApi.Stocks.StockProductModel)
+FNDA:0,System.Collections.Generic.Dictionary`2<System.String,System.Decimal> GroceryApi.Stocks.StockRepository::CalculateDetailedItemPrice(GroceryApi.Stocks.StockProductModel)
+DA:30,0
+DA:31,0
+DA:32,0
+DA:33,0
+DA:34,0
+DA:35,0
+DA:36,0
+DA:37,0
+DA:38,0
+DA:39,0
+DA:40,0
+LF:32
+LH:0
+BRF:2
+BRH:0
+FNF:4
+FNH:0
+end_of_record
+SF:/Users/rubemmota/Works/Code/Personal/Katas/GroceryApi/Stocks/StockService.cs
+FN:10,System.Collections.Generic.List`1<GroceryApi.Stocks.StockProductModel> GroceryApi.Stocks.StockService::GetStockProducts()
+FNDA:0,System.Collections.Generic.List`1<GroceryApi.Stocks.StockProductModel> GroceryApi.Stocks.StockService::GetStockProducts()
+DA:11,0
+DA:12,0
+DA:13,0
+FN:15,GroceryApi.Stocks.StockProductPrice GroceryApi.Stocks.StockService::GetProductPrice(System.String)
+FNDA:0,GroceryApi.Stocks.StockProductPrice GroceryApi.Stocks.StockService::GetProductPrice(System.String)
+DA:16,0
+DA:17,0
+DA:18,0
+DA:19,0
+DA:20,0
+DA:21,0
+DA:22,0
+DA:23,0
+DA:24,0
+DA:26,0
+DA:27,0
+BRDA:19,49,0,0
+BRDA:19,49,1,0
+FN:6,System.Void GroceryApi.Stocks.StockService::.ctor()
+FNDA:0,System.Void GroceryApi.Stocks.StockService::.ctor()
+DA:7,0
+DA:8,0
+DA:9,0
+LF:17
+LH:0
+BRF:2
+BRH:0
+FNF:3
+FNH:0
+end_of_record
+SF:/Users/rubemmota/Works/Code/Personal/Katas/GroceryApi/Controllers/CartShopController.cs
+FN:18,Microsoft.AspNetCore.Mvc.IActionResult GroceryApi.Controllers.CartShopController::Post(GroceryApi.CartShop.CartShopRequest)
+FNDA:0,Microsoft.AspNetCore.Mvc.IActionResult GroceryApi.Controllers.CartShopController::Post(GroceryApi.CartShop.CartShopRequest)
+DA:19,0
+DA:20,0
+DA:21,0
+DA:22,0
+DA:26,0
+DA:27,0
+DA:28,0
+DA:30,0
+DA:31,0
+DA:32,0
+DA:33,0
+DA:35,0
+BRDA:20,17,0,0
+BRDA:20,17,1,0
+FN:11,System.Void GroceryApi.Controllers.CartShopController::.ctor(Microsoft.Extensions.Logging.ILogger`1<GroceryApi.Controllers.CartShopController>)
+FNDA:0,System.Void GroceryApi.Controllers.CartShopController::.ctor(Microsoft.Extensions.Logging.ILogger`1<GroceryApi.Controllers.CartShopController>)
+DA:12,0
+DA:13,0
+DA:14,0
+DA:15,0
+LF:16
+LH:0
+BRF:2
+BRH:0
+FNF:2
+FNH:0
+end_of_record
+SF:/Users/rubemmota/Works/Code/Personal/Katas/GroceryApi/Controllers/StockController.cs
+FN:17,Microsoft.AspNetCore.Mvc.IActionResult GroceryApi.Controllers.StockController::Get(System.String)
+FNDA:0,Microsoft.AspNetCore.Mvc.IActionResult GroceryApi.Controllers.StockController::Get(System.String)
+DA:18,0
+DA:19,0
+DA:20,0
+DA:24,0
+DA:25,0
+DA:26,0
+DA:28,0
+DA:29,0
+DA:30,0
+DA:32,0
+DA:33,0
+DA:34,0
+DA:35,0
+DA:38,0
+BRDA:19,9,0,0
+BRDA:19,9,1,0
+FN:11,System.Void GroceryApi.Controllers.StockController::.ctor(Microsoft.Extensions.Logging.ILogger`1<GroceryApi.Controllers.StockController>)
+FNDA:0,System.Void GroceryApi.Controllers.StockController::.ctor(Microsoft.Extensions.Logging.ILogger`1<GroceryApi.Controllers.StockController>)
+DA:12,0
+DA:13,0
+DA:14,0
+LF:17
+LH:0
+BRF:2
+BRH:0
+FNF:2
+FNH:0
+end_of_record
+SF:/Users/rubemmota/Works/Code/Personal/Katas/GroceryApi/CartShop/CarShopService.cs
+FN:13,System.String GroceryApi.CartShop.CarShopService::CalculateCartShopPrice(GroceryApi.CartShop.CartShopRequest)
+FNDA:0,System.String GroceryApi.CartShop.CarShopService::CalculateCartShopPrice(GroceryApi.CartShop.CartShopRequest)
+DA:14,0
+DA:15,0
+DA:16,0
+DA:17,0
+DA:18,0
+DA:19,0
+DA:20,0
+DA:21,0
+DA:24,0
+DA:25,0
+DA:27,0
+DA:28,0
+DA:29,0
+DA:30,0
+DA:31,0
+DA:32,0
+DA:33,0
+DA:34,0
+DA:36,0
+DA:38,0
+BRDA:19,77,0,0
+BRDA:19,77,1,0
+FN:8,System.Void GroceryApi.CartShop.CarShopService::.ctor()
+FNDA:0,System.Void GroceryApi.CartShop.CarShopService::.ctor()
+DA:9,0
+DA:10,0
+DA:11,0
+LF:23
+LH:0
+BRF:2
+BRH:0
+FNF:2
+FNH:0
+end_of_record
+SF:/Users/rubemmota/Works/Code/Personal/Katas/GroceryApi/CartShop/CartShopMapper.cs
+FN:2,System.Collections.Generic.List`1<GroceryApi.CartShop.CartShopItemModel> GroceryApi.CartShop.CartShopMapper::MapForCalculations(System.Collections.Generic.List`1<System.String>)
+FNDA:2,System.Collections.Generic.List`1<GroceryApi.CartShop.CartShopItemModel> GroceryApi.CartShop.CartShopMapper::MapForCalculations(System.Collections.Generic.List`1<System.String>)
+DA:3,2
+DA:4,2
+DA:5,6
+DA:6,4
+DA:7,2
+DA:8,4
+DA:9,1
+DA:10,1
+DA:11,2
+DA:12,2
+DA:13,3
+DA:14,3
+DA:15,3
+DA:16,3
+DA:17,5
+DA:18,1
+DA:19,1
+BRDA:8,29,0,1
+BRDA:8,29,1,3
+LF:17
+LH:17
+BRF:2
+BRH:2
+FNF:1
+FNH:1
+end_of_record
+SF:/Users/rubemmota/Works/Code/Personal/Katas/GroceryApi/CartShop/CartShopRequest.cs
+FN:3,System.Collections.Generic.List`1<System.String> GroceryApi.CartShop.CartShopRequest::get_Items()
+FNDA:0,System.Collections.Generic.List`1<System.String> GroceryApi.CartShop.CartShopRequest::get_Items()
+DA:4,0
+LF:1
+LH:0
+BRF:0
+BRH:0
+FNF:1
+FNH:0
+end_of_record
