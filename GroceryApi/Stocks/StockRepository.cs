@@ -20,25 +20,42 @@ namespace GroceryApi.Stocks
 
         public decimal CalculateItemPrice(StockProductModel model) {
             decimal total = 0;
-            var revenueTax = model.CostValue * ((decimal)model.Revenue / 100);
-            total = model.CostValue + revenueTax;
-            var tax = total * ((decimal)model.Tax / 100);
-            total += tax;
-            return Math.Round(total , 2, MidpointRounding.AwayFromZero);
+            // apply taxes
+            var taxedPrice = model.CostValue * ((decimal)model.Tax / 100);
+            total = model.CostValue + taxedPrice;
+            // apply revenue
+            var revenueTaxPrice = total * ((decimal)model.Revenue / 100);
+            total += revenueTaxPrice;
+            return RoundUpToPence(total);
         }
 
         public Dictionary<string, decimal> CalculateDetailedItemPrice(StockProductModel model) {
             decimal total = 0;
-            var revenueTax = model.CostValue * ((decimal)model.Revenue / 100);
-            total = model.CostValue + revenueTax;
-            var tax = total * ((decimal)model.Tax / 100);
-            total += tax;
+            // apply taxes
+            var taxedPrice = model.CostValue * ((decimal)model.Tax / 100);
+            total = model.CostValue + taxedPrice;
+            // apply revenue
+            var revenueTaxPrice = total * ((decimal)model.Revenue / 100);
+            total += revenueTaxPrice;
+
+
             return new Dictionary<string, decimal> {
-                {"price", Math.Round(total, 2, MidpointRounding.AwayFromZero) },
-                {"taxes", Math.Round(tax, 2, MidpointRounding.AwayFromZero) }
+                {"price", RoundUpToPence(total) },
+                {"taxes", revenueTaxPrice }
             };
         }
 
+        public decimal RoundUpToPence(decimal amount) {
+            decimal scaledValue = amount * 100; // Scale to pence
+            decimal roundedValue = Math.Ceiling(scaledValue); // Round up to the nearest whole number
+            return roundedValue / 100; // Scale back to pounds
+        }
+
+        public decimal RoundDownToPence(decimal amount) {
+            decimal scaledValue = amount * 100; // Scale to pence
+            decimal roundedValue = Math.Round(scaledValue); // Round up to the nearest whole number
+            return roundedValue / 100; // Scale back to pounds
+        }
 
     }
 }

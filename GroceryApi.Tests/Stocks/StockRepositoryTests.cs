@@ -4,7 +4,7 @@ namespace GroceryApi.Tests.Stocks;
 
 public class StockRepositoryTests {
     [Theory]
-    [InlineData("Lettuce", 0.44)]
+    [InlineData("Lettuce", 0.45)]
     [InlineData("Tomato", 0.72)]
     [InlineData("Chicken", 3.10)]
     [InlineData("Bread", 2.05)]
