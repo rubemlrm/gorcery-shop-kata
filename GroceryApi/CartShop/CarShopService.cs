@@ -1,3 +1,4 @@
+using System.Globalization;
 using GroceryApi.Stocks;
 
 namespace GroceryApi.CartShop {
@@ -30,7 +31,7 @@ namespace GroceryApi.CartShop {
                 cartShopPrice["price"] += mappedItem.Quantity * priceInfo["price"];
                 cartShopPrice["taxes"] += mappedItem.Quantity *  priceInfo["taxes"];
             });
-            return $"total price {cartShopPrice["price"]}, tax {cartShopPrice["taxes"]}";
+            return $"total price {cartShopPrice["price"].ToString(CultureInfo.InvariantCulture)}, tax {cartShopPrice["taxes"].ToString(CultureInfo.InvariantCulture)}";
 
         }
 

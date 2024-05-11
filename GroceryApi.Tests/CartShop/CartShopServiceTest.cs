@@ -26,7 +26,7 @@ namespace GroceryApi.Tests.CartShop
             {
                 Items = new() { "3 Tomato","1 Chicken", "2 Bread" }
             };
-            var expected = "total price 9,36, tax 1,33";
+            var expected = "total price 9.36, tax 1.33";
             // When
             var cartShopService = new CarShopService();
             var actual = cartShopService.CalculateCartShopPrice(input);
@@ -42,7 +42,7 @@ namespace GroceryApi.Tests.CartShop
             {
                 Items = new() { "2 Jam", "5 Lettuce", "3 Chicken" }
             };
-            var expected = "total price 20,55, tax 3,36";
+            var expected = "total price 20.55, tax 3.36";
             // When
             var cartShopService = new CarShopService();
             var actual = cartShopService.CalculateCartShopPrice(input);
@@ -58,7 +58,7 @@ namespace GroceryApi.Tests.CartShop
             {
                 Items = new() { "1 Lettuce", "1 Chicken" }
             };
-            var expected = "total price 3,55, tax 0,58";
+            var expected = "total price 3.55, tax 0.58";
             // When
             var cartShopService = new CarShopService();
             var actual = cartShopService.CalculateCartShopPrice(input);
