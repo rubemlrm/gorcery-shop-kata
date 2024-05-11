@@ -29,7 +29,7 @@ namespace GroceryApi.CartShop {
                 var item = _stockRepository.FindOrFail(mappedItem.Name);
                 var priceInfo = _stockRepository.CalculateDetailedItemPrice(item);
                 cartShopPrice["price"] += mappedItem.Quantity * priceInfo["price"];
-                cartShopPrice["taxes"] += mappedItem.Quantity *  priceInfo["taxes"];
+                cartShopPrice["taxes"] += mappedItem.Quantity * Math.Round(priceInfo["taxes"], 2);
             });
             return $"total price {cartShopPrice["price"].ToString(CultureInfo.InvariantCulture)}, tax {cartShopPrice["taxes"].ToString(CultureInfo.InvariantCulture)}";
 
