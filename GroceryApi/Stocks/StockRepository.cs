@@ -30,10 +30,9 @@ namespace GroceryApi.Stocks
         }
 
         public Dictionary<string, decimal> CalculateDetailedItemPrice(StockProductModel model) {
-            decimal total = 0;
             // apply taxes
             var taxedPrice = model.CostValue * ((decimal)model.Tax / 100);
-            total = model.CostValue + taxedPrice;
+            decimal total = model.CostValue + taxedPrice;
             // apply revenue
             var revenueTaxPrice = total * ((decimal)model.Revenue / 100);
             total += revenueTaxPrice;
