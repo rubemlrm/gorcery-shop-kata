@@ -40,7 +40,7 @@ namespace GroceryApi.Stocks
 
             return new Dictionary<string, decimal> {
                 {"price", RoundUpToPence(total) },
-                {"taxes", revenueTaxPrice }
+                {"taxes", RoundUpToPence(revenueTaxPrice) }
             };
         }
 
