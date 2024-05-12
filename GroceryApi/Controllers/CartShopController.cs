@@ -28,7 +28,7 @@ namespace GroceryApi.Controllers
 
             try
             {
-                var carShopService = new CarShopService(_stockRepository);
+                var carShopService = new CartShopService(_stockRepository);
                 return Ok(carShopService.CalculateCartShopPrice(request));
             }
             catch (System.Exception ex)

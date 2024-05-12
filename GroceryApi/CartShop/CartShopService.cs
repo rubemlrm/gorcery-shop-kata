@@ -3,13 +3,10 @@ using GroceryApi.Stocks;
 
 namespace GroceryApi.CartShop {
 
-    public class CarShopService {
+    public class CartShopService(StockRepository stockRepository)
+    {
 
-        private readonly StockRepository _stockRepository;
-
-        public CarShopService(StockRepository stockRepository) {
-            _stockRepository = stockRepository;
-        }
+        private readonly StockRepository _stockRepository = stockRepository;
 
         public string CalculateCartShopPrice(CartShopRequest request)
         {

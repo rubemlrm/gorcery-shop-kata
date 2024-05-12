@@ -2,6 +2,9 @@ namespace GroceryApi.Stocks
 {
 
     public class StockRepository {
+
+        public StockRepository() { }
+
         public List<StockProductModel> All()
         {
             return [

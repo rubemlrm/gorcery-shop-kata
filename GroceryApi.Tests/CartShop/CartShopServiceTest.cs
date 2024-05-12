@@ -1,4 +1,5 @@
 using GroceryApi.CartShop;
+using GroceryApi.Stocks;
 
 namespace GroceryApi.Tests.CartShop
 {
@@ -30,7 +31,8 @@ namespace GroceryApi.Tests.CartShop
         public void TestCalculateCartShopPriceWithProducts(CartShopRequest input, string result)
         {
             // When
-            var cartShopService = new CarShopService();
+            var repository = new StockRepository();
+            var cartShopService = new CartShopService(repository);
             var actual = cartShopService.CalculateCartShopPrice(input);
             // Then
             Assert.Equal(result, actual);
