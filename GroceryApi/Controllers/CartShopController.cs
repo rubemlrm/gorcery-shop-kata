@@ -1,4 +1,5 @@
 using GroceryApi.CartShop;
+using GroceryApi.Stocks;
 using Microsoft.AspNetCore.Mvc;
 
 namespace GroceryApi.Controllers
@@ -9,9 +10,12 @@ namespace GroceryApi.Controllers
     {
         private readonly ILogger<CartShopController> _logger;
 
-        public CartShopController(ILogger<CartShopController> logger)
+        private readonly StockRepository _stockRepository;
+
+        public CartShopController(ILogger<CartShopController> logger, StockRepository repository)
         {
             _logger = logger;
+            _stockRepository = repository;
         }
 
         [HttpPost(Name = "PostShopOrder")]
@@ -24,7 +28,7 @@ namespace GroceryApi.Controllers
 
             try
             {
-                var carShopService = new CarShopService();
+                var carShopService = new CarShopService(_stockRepository);
                 return Ok(carShopService.CalculateCartShopPrice(request));
             }
             catch (System.Exception ex)

@@ -7,8 +7,8 @@ namespace GroceryApi.CartShop {
 
         private readonly StockRepository _stockRepository;
 
-        public CarShopService() {
-            _stockRepository = new StockRepository();
+        public CarShopService(StockRepository stockRepository) {
+            _stockRepository = stockRepository;
         }
 
         public string CalculateCartShopPrice(CartShopRequest request)

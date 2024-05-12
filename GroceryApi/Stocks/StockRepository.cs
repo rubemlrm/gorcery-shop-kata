@@ -24,7 +24,7 @@ namespace GroceryApi.Stocks
             var taxedPrice = model.CostValue * ((decimal)model.Tax / 100);
             total = model.CostValue + taxedPrice;
             // apply revenue
-            var revenueTaxPrice = total * ((decimal)model.Revenue / 100);
+            var revenueTaxPrice = 0 * ((decimal)model.Revenue / 100);
             total += revenueTaxPrice;
             return RoundUpToPence(total);
         }
@@ -49,12 +49,5 @@ namespace GroceryApi.Stocks
             decimal roundedValue = Math.Ceiling(scaledValue); // Round up to the nearest whole number
             return roundedValue / 100; // Scale back to pounds
         }
-
-        public decimal RoundDownToPence(decimal amount) {
-            decimal scaledValue = amount * 100; // Scale to pence
-            decimal roundedValue = Math.Round(scaledValue); // Round up to the nearest whole number
-            return roundedValue / 100; // Scale back to pounds
-        }
-
     }
 }
