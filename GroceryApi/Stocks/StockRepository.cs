@@ -22,12 +22,12 @@ namespace GroceryApi.Stocks
         }
 
         public decimal CalculateItemPrice(StockProductModel model) {
-            decimal total = 0;
+
             // apply taxes
             var taxedPrice = model.CostValue * ((decimal)model.Tax / 100);
-            total = model.CostValue + taxedPrice;
+            var total = model.CostValue + taxedPrice;
             // apply revenue
-            var revenueTaxPrice = 0 * ((decimal)model.Revenue / 100);
+            var revenueTaxPrice = total * ((decimal)model.Revenue / 100);
             total += revenueTaxPrice;
             return RoundUpToPence(total);
         }
